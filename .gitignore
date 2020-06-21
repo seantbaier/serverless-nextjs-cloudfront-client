@@ -38,4 +38,4 @@ cypress/videos
 cypress.env.json
 
 # Serverless
-# .serverless
+.serverless
