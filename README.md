@@ -1,4 +1,4 @@
-# Ecommerce Salesforce Client
+# Deadbear Client
 
 ## AWS Policy Needed
 
