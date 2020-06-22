@@ -1,21 +1,13 @@
 import { Component } from 'react'
-import amplifyCustomUi from 'aws-amplify-react-custom-ui'
-import { Auth } from 'aws-amplify'
 
-import Router from 'next/router'
+// Import Components
+import HomePage from '../components/HomePage/HomePage'
 
 class Index extends Component {
   async componentDidMount() {}
   render() {
-    const { authState } = this.props
-
-    if (authState === 'signedIn') {
-      Router.push('/discrepancy-report')
-    } else {
-      Auth.signOut()
-    }
-    return null
+    return <HomePage />
   }
 }
 
-export default amplifyCustomUi.withAuthenticator(Index)
+export default Index
