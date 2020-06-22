@@ -1,2 +1,4 @@
 deadbear-io-client:
   component: serverless-next.js
+  inputs:
+    domain: ["www", "deadbear.io"] # [ sub-domain, domain ]

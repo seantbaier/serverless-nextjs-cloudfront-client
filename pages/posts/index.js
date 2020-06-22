@@ -1,52 +1,24 @@
-import { Component } from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import amplifyCustomUi from '../../utilities/custom-auth-ui-config'
 
 // import components
-import DefaultLayout from '../../components/DefaultLayout/DefaultLayout'
-import SalesForceReportsList from '../../components/SalesforceReports/SalesforceReportsList'
 
 // Actions
-import { getPlatformDataContractCheckAction } from '../../store/actions/platformDataContractCheck'
 
-const SalesforceReports = (props) => {
-  const { authState } = props
-
-  console.log('sss props: ', props)
-
-  if (authState === 'signedIn') {
-    return (
+const Post = (props) => {
+  return (
+    <div>
       <div>
-        <div>
-          <DefaultLayout>
-            <h1 className="dashboard-title">Salesforce Reports</h1>
-            <SalesForceReportsList />
-          </DefaultLayout>
-        </div>
+        <h1 className="dashboard-title">Post</h1>
       </div>
-    )
-  } else {
-    Auth.signOut()
-  }
-  return null
+    </div>
+  )
 }
 
-SalesforceReports.getInitialProps = ({ store, pathname, query }) => {
-  console.log('store: ', store)
-  return { custom: 'custom' }
-}
+Post.getInitialProps = ({ store, pathname, query }) => {}
 
-const mapStateToProps = (state) => {
-  return {
-    platformDataContractCheck: state.platformDataContractCheck.find
-  }
-}
+const mapStateToProps = (state) => {}
 
-const mapDispatchToProps = (dispatch) => ({
-  getPlatformDataContractCheck: dispatch(getPlatformDataContractCheckAction())
-})
+const mapDispatchToProps = (dispatch) => ({})
 
-export default amplifyCustomUi.withAuthenticator(
-  compose(connect(mapStateToProps, mapDispatchToProps))(SalesforceReports)
-)
+export default compose(connect(mapStateToProps, mapDispatchToProps))(Post)
