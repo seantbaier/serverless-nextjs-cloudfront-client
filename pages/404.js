@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NotFoundError = () => {
+const NotFoundError = ({ statusCode }) => {
   return (
     <div>
       <h1>Error</h1>

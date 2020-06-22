@@ -1,4 +1,4 @@
-import api from '../../api'
+import api from '../../pages/api'
 import { PLATFORM_DATA_CONTRACT_CHECK_FIND } from './types'
 
 export const getPlatformDataContractCheckAction = () => {

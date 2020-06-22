@@ -1,11 +1,9 @@
 import Amplify, { Auth } from 'aws-amplify'
 import axios from 'axios'
 
-import { ENDPOINT_TYPE } from '../store/constants'
+import { ENDPOINT_TYPE } from '../../store/constants'
 import auth from './auth'
 import user from './user'
-import salesforce from './salesforce'
-import platformDataContractCheck from './platformDataContractCheck'
 
 Amplify.configure({
   Auth: {
@@ -56,7 +54,5 @@ axios.interceptors.request.use(
 
 export default {
   auth: auth(Auth),
-  user: user(authEndpointUrl, publicEndpointUrl),
-  salesforce: salesforce(authEndpointUrl, publicEndpointUrl),
-  platformDataContractCheck: platformDataContractCheck(authEndpointUrl)
+  user: user(authEndpointUrl, publicEndpointUrl)
 }
