@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce-salesforce-client",
+  "name": "deadbear-io-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,7 @@
     "csvtojson": "^2.0.10",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.7.0",
+    "envfile": "^6.8.0",
     "formik": "^2.1.4",
     "fs": "^0.0.1-security",
     "global": "^4.4.0",
