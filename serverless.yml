@@ -5,3 +5,4 @@ deadbear-io-client:
     name:
       defaultLambda: deadbear-io-client-lambda-development
       apiLambda: deadbear-io-client-api-lambda-development
+    bucketName: deadbear-io-client-bucket-development
