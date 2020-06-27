@@ -13,6 +13,7 @@ jobs:
 
     steps:
       - checkout
+      - run: env > .env
       - run: yarn
       - run: yarn lint
       - run: yarn test
