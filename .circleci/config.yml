@@ -46,8 +46,8 @@ workflows:
       #         only: development
       - deploy-dev:
           context: deadbear-io-dev
-          requires:
-            - build-dev
+          # requires:
+          #   - build-dev
           filters:
             branches:
               only: development
