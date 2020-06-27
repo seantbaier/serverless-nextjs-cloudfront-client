@@ -37,6 +37,8 @@ jobs:
       - run: env > .env
       - run: yarn deploy
 
+      # ctest
+
 workflows:
   version: 2
   build-and-deploy-dev:
