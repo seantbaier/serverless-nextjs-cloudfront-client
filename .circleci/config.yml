@@ -23,10 +23,7 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - aws-cli/setup:
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_REGION
+      - aws-cli/setup
       - run:
           name: Downlaod Serverless State
           command: aws s3 sync s3://${CLIENT_SERVERLESS_STATE_BUCKET}/.serverless .serverless --delete
