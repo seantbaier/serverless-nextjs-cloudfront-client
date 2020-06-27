@@ -39,11 +39,11 @@ workflows:
   version: 2
   build-and-deploy-dev:
     jobs:
-      - build-dev:
-          context: deadbear-io-dev
-          filters:
-            branches:
-              only: development
+      # - build-dev:
+      #     context: deadbear-io-dev
+      #     filters:
+      #       branches:
+      #         only: development
       - deploy-dev:
           context: deadbear-io-dev
           requires:
