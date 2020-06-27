@@ -8,7 +8,7 @@ import './HomePage.scss'
 export default function HomePage({ children }) {
   return (
     <div>
-      <div className="main-section-container">Home</div>
+      <div className="main-section-container">Home Changed</div>
     </div>
   )
 }
