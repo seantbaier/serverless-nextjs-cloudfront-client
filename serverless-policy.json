@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "VisualEditor0",
+      "Effect": "Allow",
+      "Action": [
+        "lambda:UpdateFunctionCode",
+        "iam:GetRole",
+        "iam:PassRole",
+        "lambda:UpdateFunctionConfiguration",
+        "lambda:GetFunctionConfiguration",
+        "lambda:PublishVersion",
+        "cloudfront:GetDistributionConfig",
+        "cloudfront:CreateCloudFrontOriginAccessIdentity"
+      ],
+      "Resource": [
+        "<func_arn>",
+        "<iam_role_arn>",
+        "<cloudfront_distribution_arn>",
+        "<cloudfront_origin-access-identity_arn>"
+      ]
+    }
+  ]
+}
